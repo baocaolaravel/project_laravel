@@ -9,7 +9,7 @@
         #insert {margin-top: 20px;}
     </style>
     <form action="" method="POST" name="frmEditProduct" enctype="multipart/form-data">
-    <div class="col-lg-7" style="padding-bottom:120px">
+    <div class="col-lg-9" style="padding-bottom:120px">
             @include('admin.blocks.error')
             <input type="hidden" name="_token" value="{!! csrf_token() !!}">
             <div class="form-group">

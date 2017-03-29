@@ -9,7 +9,7 @@
             <th>Hình ảnh</th>
             <th>Tên</th>
             <th>Thời gian</th>
-            <th>Danh mục</th>
+            <th>Loại tin</th>
             <th>Xóa</th>
             <th>Sửa</th>
         </tr>
@@ -23,12 +23,12 @@
             <td><img src="{!! asset('resources/upload/'.$item['image']) !!}" style="height: 100px; width: 150px;"></td>
             <td>{!! $item["name"] !!}</td>
             <td>{!! \Carbon\Carbon::createFromTimestamp(strtotime($item["created_at"]))->diffForHumans() !!}</td>
-            <td><?php $cate = DB::table('cates')->where('id',$item["cate_id"])->first() ?>
+            <td><?php $cate = DB::table('cate_tintucs')->where('id',$item["cate_id"])->first() ?>
                 @if(!empty($cate->name))
                     {!! $cate->name !!}
                 @endif
             </td>
-            <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="{!! URL::route('admin.tintuc.getDelete',$item['id']) !!}" onclick="return xacnhanxoa('Bạn có chắc muốn xóa sản phẩm này không!')"> Xóa</a></td>
+            <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="{!! URL::route('admin.tintuc.getDelete',$item['id']) !!}" onclick="return xacnhanxoa('Bạn có chắc muốn xóa tin tức này không!')"> Xóa</a></td>
             <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="{!! URL::route('admin.tintuc.getEdit',$item['id']) !!}">Sửa</a></td>
         </tr>
         @endforeach

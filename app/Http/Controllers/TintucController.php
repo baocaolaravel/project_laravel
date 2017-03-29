@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\Controller;
 use Auth;
-use App\Cate;
+use App\CateTintuc;
 use App\Tintuc;
 use App\Http\Requests\TintucRequest;
 use Input,File;
@@ -16,7 +16,7 @@ class TintucController extends Controller {
         return view('admin.tintuc.list',compact('data'));
     }
     public function getAdd(){
-        $cate = Cate::select('id','name','parent_id')->get()->toArray();
+        $cate = CateTintuc::select('id','name','parent_id')->get()->toArray();
         return view('admin.tintuc.add',compact('cate'));
     }
     public function postAdd(TintucRequest $tintuc_request){
@@ -42,7 +42,7 @@ class TintucController extends Controller {
         return redirect()->route('admin.tintuc.list')->with(['flash_level'=>'success','flash_message'=>'Thành công! Tin tức đã được xóa!']);
     }
     public function getEdit($id){
-        $cate = Cate::select('id','name','parent_id')->get()->toArray();
+        $cate = CateTintuc::select('id','name','parent_id')->get()->toArray();
         $tintuc = Tintuc::find($id);
         return view('admin.tintuc.edit',compact('cate','tintuc'));
     }

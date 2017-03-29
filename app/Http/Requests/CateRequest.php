@@ -22,14 +22,17 @@ class CateRequest extends Request {
 	public function rules()
 	{
 		return [
-			'txtCateName' => 'required|unique:cates,name'
+			'txtCateName' => 'required|unique:cates,name',
+			'fImages' => 'required|image'
 		];
 	}
 	public function messages()
     {
         return [
-            'txtCateName.required' => 'Vui lòng nhập tên sản phẩm!',
-            'txtCateName.unique' => 'Tên sản phẩm này đã tồn tại!'
+            'txtCateName.required' => 'Vui lòng nhập tên danh mục!',
+            'txtCateName.unique' => 'Tên danh mục này đã tồn tại!',
+            'fImages.required' => 'Vui lòng chọn hình ảnh!',
+            'fImages.image' => 'Tệp này không phải hình ảnh!'
         ];
     }
 

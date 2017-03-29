@@ -1,5 +1,5 @@
 @extends('admin.master')
-@section('controller','Sản phẩm')
+@section('controller','Dịch vụ')
 @section('action','Thêm')
 @section('content')
     <form action="{!! route('admin.product.getAdd') !!}" method="POST" enctype="multipart/form-data">

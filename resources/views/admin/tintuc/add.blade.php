@@ -3,7 +3,7 @@
 @section('action','Thêm')
 @section('content')
     <form action="{!! route('admin.tintuc.getAdd') !!}" method="POST" enctype="multipart/form-data">
-    <div class="col-lg-7" style="padding-bottom:120px">
+    <div class="col-lg-9" style="padding-bottom:120px">
         @include('admin.blocks.error')
             <input type="hidden" name="_token" value="{!! csrf_token() !!}">
             <div class="form-group">
@@ -14,7 +14,7 @@
                 </select>
             </div>
             <div class="form-group">
-                <label>Thên tin tức</label>
+                <label>Thêm tin tức</label>
                 <input class="form-control" name="txtName" placeholder="Vui lòng nhập tên tin tức!" value="{!! old('txtName') !!}"/>
             </div>
             <div class="form-group">

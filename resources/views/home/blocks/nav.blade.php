@@ -7,7 +7,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top" style="font-family: 'Fugaz One', cursive;">FPT TELECOM - AN GIANG</a>
+                <a class="navbar-brand page-scroll" href="{!! url('/') !!}" style="font-family: 'Fugaz One', cursive;">FPT TELECOM - AN GIANG</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -16,6 +16,9 @@
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                     <li class="hidden">
                         <a class="page-scroll" href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about" style="font-family: 'Oswald', sans-serif; font-size: 15pt;">DỊCH VỤ</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#about" style="font-family: 'Oswald', sans-serif; font-size: 15pt;">DỊCH VỤ</a>
@@ -31,4 +34,4 @@
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
-    </nav>
+</nav>

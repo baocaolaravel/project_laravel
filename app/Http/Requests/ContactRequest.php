@@ -22,20 +22,19 @@ class ContactRequest extends Request {
 	public function rules()
 	{
         return [
-            'txtName' => 'required|unique:contacts,name',
-            'txtEmail' => 'required|unique:contacts,email',
+            'txtName' => 'required',
+            'txtEmail' => 'required',
             'txtTelno' => 'required',
-
+			'txtAddress' => 'required',
         ];
 	}
     public function messages()
     {
         return [
             'txtName.required' => 'Vui lòng nhập tên khách hàng',
-            'txtName.unique' => 'Tên khách hàng đã tồn tại',
             'txtEmail.required' => 'Vui lòng nhập email khách hàng',
-            'txtEmail.unique' => 'Email này đã được sử dụng',
-            'txtTelno.required' => 'Vui lòng nhập số điện thoại khách hàng'
+            'txtTelno.required' => 'Vui lòng nhập số điện thoại khách hàng',
+            'txtAddress.required' => 'Vui lòng nhập địa chỉ khách hàng'
         ];
     }
 

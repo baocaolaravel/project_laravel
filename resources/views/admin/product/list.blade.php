@@ -1,5 +1,5 @@
 @extends('admin.master')
-@section('controller','Sản phẩm')
+@section('controller','Dịch vụ')
 @section('action','Danh sách')
 @section('content')
     <table class="table table-striped table-bordered table-hover" id="dataTables-example">

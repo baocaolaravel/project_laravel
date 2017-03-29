@@ -1,5 +1,5 @@
 @extends('admin.master')
-@section('controller','Sản phẩm')
+@section('controller','Dịch vụ')
 @section('action','Sửa')
 @section('content')
     <style>

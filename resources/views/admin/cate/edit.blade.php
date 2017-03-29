@@ -2,9 +2,12 @@
 @section('controller','Danh mục')
 @section('action','Sửa')
 @section('content')
+    <style>
+        .img_current {width: 200px;}
+    </style>
     <div class="col-lg-7" style="padding-bottom:120px">
         @include('admin.blocks.error')
-        <form action="" method="POST">
+        <form action="" method="POST" enctype="multipart/form-data">
             <input type="hidden" name="_token" value="{!! csrf_token() !!}">
             <div class="form-group">
                 <label>Danh mục cha</label>
@@ -22,6 +25,15 @@
                 <input class="form-control" name="txtKeywords" placeholder="Vui lòng nhập từ khóa danh mục!" value="{!! old('txtKeywords',isset($data) ? $data['keywords']: null) !!}"/>
             </div>
             <div class="form-group">
+                <label>Hình ảnh hiện hành</label>
+                <img src="{!! asset('resources/upload/'.$data['image']) !!}" class="img_current"/>
+                <input type="hidden" name="img_current" value="{!! $data['image'] !!}"/>
+            </div>
+            <div class="form-group">
+                <label>Hình ảnh</label>
+                <input type="file" name="fImages">
+            </div>
+            <div class="form-group">
                 <label>Thứ tự danh mục</label>
                 <input class="form-control" name="txtOrder" placeholder="Vui lòng nhập thứ tự danh mục!" value="{!! old('txtOrder',isset($data) ? $data['order']: null) !!}"/>
             </div>
@@ -29,7 +41,7 @@
                 <label>Miêu tả danh mục</label>
                 <textarea class="form-control" rows="3" name="txtDescription" value="">{!! old('txtDescription',isset($data) ? $data['description']: null) !!}</textarea>
             </div>
-            <button type="submit" class="btn btn-default">Sửa danh mục</button>
+            <button type="submit" class="btn btn-default">Sửa</button>
             <button type="reset" class="btn btn-default">Làm lại</button>
             <form>
 @endsection()

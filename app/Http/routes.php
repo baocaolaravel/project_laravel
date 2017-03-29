@@ -37,6 +37,14 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'],function (){
         Route::post('edit/{id}',['as'=>'admin.product.postEdit','uses'=>'ProductController@postEdit']);
         Route::get('delimg/{id}',['as'=>'admin.product.getDelImg','uses'=>'ProductController@getDelImg']);
     });
+    Route::group(['prefix'=>'cate_tintuc'],function (){
+        Route::get('list',['as'=>'admin.cate_tintuc.list','uses'=>'CateTintucController@getList']);
+        Route::get('add',['as'=>'admin.cate_tintuc.getAdd','uses'=>'CateTintucController@getAdd']);
+        Route::post('add',['as'=>'admin.cate_tintuc.postAdd','uses'=>'CateTintucController@postAdd']);
+        Route::get('delete/{id}',['as'=>'admin.cate_tintuc.getDelete','uses'=>'CateTintucController@getDelete']);
+        Route::get('edit/{id}',['as'=>'admin.cate_tintuc.getEdit','uses'=>'CateTintucController@getEdit']);
+        Route::post('edit/{id}',['as'=>'admin.cate_tintuc.postEdit','uses'=>'CateTintucController@postEdit']);
+    });
     Route::group(['prefix'=>'tintuc'],function (){
         Route::get('list',['as'=>'admin.tintuc.list','uses'=>'TintucController@getList']);
         Route::get('add',['as'=>'admin.tintuc.getAdd','uses'=>'TintucController@getAdd']);
@@ -55,12 +63,22 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'],function (){
     });
     Route::group(['prefix'=>'contact'],function (){
         Route::get('list',['as'=>'admin.contact.list','uses'=>'ContactController@getList']);
-        Route::get('add',['as'=>'admin.contact.getAdd','uses'=>'ContactController@getAdd']);
-        Route::post('add',['as'=>'admin.contact.postAdd','uses'=>'ContactController@postAdd']);
         Route::get('delete/{id}',['as'=>'admin.contact.getDelete','uses'=>'ContactController@getDelete']);
         Route::get('change/{id}',['as'=>'admin.contact.getChange','uses'=>'ContactController@getChange']);
     });
 });
 
-Route::get('loai-san-pham/{id}/{tenloai}',['as'=>'loaisanpham','uses'=>'WelcomeController@loaisanpham']);
+Route::get('loai-dich-vu/{id}/{tenloai}',['as'=>'loaidichvu','uses'=>'WelcomeController@loaidichvu']);
+Route::get('gioi-thieu',['as'=>'gioithieu','uses'=>'WelcomeController@gioithieu']);
+Route::get('chi-tiet-tin-tuc/{id}/{loaitin}',['as'=>'chitiettintuc','uses'=>'WelcomeController@chitiettintuc']);
+Route::get('chi-tiet-dich-vu/{id}/{loaitin}',['as'=>'chitietdichvu','uses'=>'WelcomeController@chitietdichvu']);
+Route::get('chuyen-sang-dang-ky/{id}/{dichvu}',['as'=>'chuyensangdangky','uses'=>'WelcomeController@chuyensangdangky']);
+Route::post('dang-ky-du-dung',['as'=>'postdangkysd','uses'=>'WelcomeController@post_dangkysd']);
+
+
+
+
+
+
+
 

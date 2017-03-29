@@ -79,7 +79,7 @@
                         <a href="#"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                     </li>-->
                     <li>
-                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Danh mục<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Danh mục dịch vụ<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
                                 <a href="{!! url('admin/cate/list') !!}" class="fa fa-list"> Danh sách danh mục</a>
@@ -91,13 +91,25 @@
                         <!-- /.nav-second-level -->
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-cube fa-fw"></i> Sản phầm<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-cube fa-fw"></i> Dịch vụ<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="{!! url('admin/product/list') !!}" class="fa fa-list"> Danh sách sản phẩm</a>
+                                <a href="{!! url('admin/product/list') !!}" class="fa fa-list"> Danh sách dịch vụ</a>
                             </li>
                             <li>
-                                <a href="{!! url('admin/product/add') !!}" class="fa fa-plus"> Thêm sản phẩm</a>
+                                <a href="{!! url('admin/product/add') !!}" class="fa fa-plus"> Thêm dịch vụ</a>
+                            </li>
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-barcode fa-fw"></i> Loại tin tức<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="{!! url('admin/cate_tintuc/list') !!}" class="fa fa-list"> Danh sách loại tin tức</a>
+                            </li>
+                            <li>
+                                <a href="{!! url('admin/cate_tintuc/add') !!}" class="fa fa-plus"> Thêm loại tin tức</a>
                             </li>
                         </ul>
                         <!-- /.nav-second-level -->
@@ -131,9 +143,6 @@
                         <ul class="nav nav-second-level">
                             <li>
                                 <a href="{!! url('admin/contact/list') !!}" class="fa fa-list"> Danh sách liên lạc</a>
-                            </li>
-                            <li>
-                                <a href="{!! url('admin/contact/add') !!}" class="fa fa-plus"> Thêm liên lạc</a>
                             </li>
                         </ul>
                         <!-- /.nav-second-level -->

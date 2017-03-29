@@ -16,11 +16,28 @@
     <link href="{!! url('public/home/css/shop-homepage.css') !!}" rel="stylesheet">
     <link href="{!! url('public/home/css/3-col-portfolio.css') !!}" rel="stylesheet">
     <link href="{!! url('public/home/css/stylish-portfolio.css') !!}" rel="stylesheet">
-    <!-- Custom CSS -->
     <link href="{!! url('public/home/css/scrolling-nav.css') !!}" rel="stylesheet">
+    
+    
+    <!-- Custom CSS -->
+    <link href="{!! url('public/home/vendor/font-awesome/css/font-awesome.min.css') !!}" rel="stylesheet" type="text/css">
+    <link href="{!! url('public/home/vendor/magnific-popup/magnific-popup.css') !!}" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
     <link href="https://fonts.googleapis.com/css?family=Fugaz+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cormorant+Infant|Fugaz+One|Oswald" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
+    <link href="{!! url('public/home/css/creative.css') !!}" rel="stylesheet">
+	
+	<!-- Theme CSS -->
+    <link href="{!! url('public/home/css/agency.css') !!}" rel="stylesheet">
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -41,31 +58,25 @@
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
-    <!-- Navigation -->
-    @include('home.blocks.nav')
-
-    <!-- slide -->
-    @include('home.blocks.slide')
-
-    <!-- Intro Section -->
-    @include('home.blocks.intro')
-
+	@include('home.blocks.header')
     
-    <!-- Intro Section -->
+    <!--Advertise-->
+    @include('home.blocks.advs')
+
+    <!-- About Section -->
     @yield('content')
-    
 
     <!-- Contact Section -->
-    @include('home.blocks.lienhe')
+    @include('home.blocks.contact')
+    
 
     <!--Map-->
-    
+    <div class="container-fluid">
     <div class="col-md-10 col-md-offset-1" style="height: 500px;">
         <div class="row">
-            <div class="col-lg-12">
-                <iframe src="https://www.google.com/maps/d/embed?mid=14Lqg-tTETf_aV3hH5PacaGFo-GQ" style="height: 450px; width: 100%; "></iframe>
-            </div>
+            <iframe src="https://www.google.com/maps/d/embed?mid=14Lqg-tTETf_aV3hH5PacaGFo-GQ" style="height: 450px; width: 100%; "></iframe>
         </div>
+    </div>
     </div>
 
     <!-- Footer-->
@@ -73,14 +84,29 @@
     
     <!-- jQuery -->
     <script src="{!! url('public/home/js/jquery.js') !!}"></script>
+    <script src="{!! url('public/home/vendor/jquery/jquery.min.js') !!}"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="{!! url('public/home/js/bootstrap.min.js') !!}"></script>
-
+    <script src="{!! url('public/home/vendor/bootstrap/js/bootstrap.min.js') !!}"></script>
+	
+	<!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" integrity="sha384-mE6eXfrb8jxl0rzJDBRanYqgBxtJ6Unn4/1F7q4xRRyIw7Vdg9jP4ycT7x1iVsgb" crossorigin="anonymous"></script>
+	
+	<!-- Contact Form JavaScript -->
+    <script src="{!! url('public/home/js/jqBootstrapValidation.js') !!}"></script>
+    <script src="{!! url('public/home/js/contact_me.js') !!}"></script>
+	
     <!-- Scrolling Nav JavaScript -->
     <script src="{!! url('public/home/js/jquery.easing.min.js') !!}"></script>
     <script src="{!! url('public/home/js/scrolling-nav.js') !!}"></script>
     <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="{!! url('public/home/vendor/scrollreveal/scrollreveal.min.js') !!}"></script>
+    <script src="{!! url('public/home/vendor/magnific-popup/jquery.magnific-popup.min.js') !!}"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="{!! url('public/home/js/creative.min.js') !!}"></script>
 
 </body>
 

@@ -6,7 +6,7 @@ class Cate extends Model {
 
 	protected $table = 'cates';
 
-	protected $fillable = ['name','alias','order','parent_id','keywords','description'];
+	protected $fillable = ['name','alias','image','order','parent_id','keywords','description'];
 
 	public  function product () {
 	    return $this->hasMany('App\Product');

@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Khóa Học Lập Trình Laravel Framework 5.x Tại Khoa Phạm">
-    <meta name="author" content="Vu Quoc Tuan">
+    <meta name="description" content="Trang Admin của FPT Telecom - Chi nhánh An Giang">
+    <meta name="author" content="Nhóc Dảnh">
 
-    <title>Admin - Khoa Phạm</title>
+    <title>FPT Telecom - Chi nhánh An Giang</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="{{url('public/admin/bower_components/bootstrap/dist/css/bootstrap.min.css')}}" rel="stylesheet">
